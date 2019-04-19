@@ -6,7 +6,7 @@ library(tseries)
 
 # Set your working directory to where your script and
 # data files sit on your local computer
-setwd("C:\\Users\\Rebecca\\Desktop\\time_series")
+setwd("C:\\Your\\Path\\Directory\\Here")
 
 # Read csv file of train dataset as a univariate 
 # (single variable) series, with datetime 
