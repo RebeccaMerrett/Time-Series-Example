@@ -1,4 +1,4 @@
-# Time-Series-Example
+# Time Series Example
 Learn how to:
 - Read and index data for time series
 - Check the data is stationary
