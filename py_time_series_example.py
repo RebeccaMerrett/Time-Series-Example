@@ -11,8 +11,8 @@ import statistics
 # as the row index
 hourly_sentiment_series = pd.read_csv('hourly_users_sentiment_subset.csv', 
                                       index_col=0, 
-									  parse_dates=True,
-									  squeeze=True)
+				      parse_dates=True,
+				      squeeze=True)
 print(hourly_sentiment_series.head())
 
 # Check data is indexed as DatetimeIndex
@@ -100,17 +100,17 @@ print('De-differenced values ', undiff2.head())
 # All values with last 5 being predicted values
 hourly_sentiment_full_actual = pd.read_csv('hourly_users_sentiment_sample.csv', 
                                            index_col=0, 
-										   parse_dates=True,
-										   squeeze=True)
+					   parse_dates=True,
+					   squeeze=True)
 print(hourly_sentiment_full_actual.tail())
 indx_row_values = hourly_sentiment_full_actual.index[19:24]
 print(indx_row_values)
 predicted_series_values = pd.Series(ARMA1predict_5hourly_sentiment, 
                                     index=['2019-02-06 19:00:00', 
-									       '2019-02-06 20:00:00',
-										   '2019-02-06 21:00:00', 
-										   '2019-02-06 22:00:00',
-										   '2019-02-06 23:00:00'])
+				           '2019-02-06 20:00:00',
+					   '2019-02-06 21:00:00', 
+					   '2019-02-06 22:00:00',
+					   '2019-02-06 23:00:00'])
 print(predicted_series_values)
 hourly_sentiment_full_predicted = hourly_sentiment_series.append(predicted_series_values)
 print(hourly_sentiment_full_predicted.tail())
